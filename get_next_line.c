@@ -57,7 +57,7 @@ char	*make_line_from(char *save)
 		return (NULL);
 	while (save[i] != '\0' && save[i] != '\n')
 		i++;
-	line = ft_calloc(i + 2, sizeof(char));
+	line = ft_calloc(i + (save[i] == '\n') + 1, sizeof(char));
 	i = 0;
 	while (save[i] != '\0' && save[i] != '\n')
 	{
